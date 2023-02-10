@@ -7,7 +7,117 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  padding: 0px 100px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 50px;
+}
+.nav .logo-div img {
+  width: 120px;
+  height: 40px;
+}
+.search-box-container {
+  width: 50%;
+  margin: 10px 0px;
+  padding: 5px;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #ddd;
+  padding: 0;
+}
+.search-box input {
+  height: 60px;
+  width: 70%;
+  outline: 0;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.search-box button {
+  padding: 10px 50px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  background: #0B5BD1;
+  border: none;
+  text-transform: capitalize;
+  border-radius: 20px;
+}
+.search-result-container {
+  margin-top: 50px;
+  padding: 5px;
+}
+.search-result-item {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  padding: 10px;
+}
+.search-result-item-left {
+  width: 10%;
+  object-fit: contain;
+}
+.search-result-item-left img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+.search-result-item-middle {
+  width: 60%;
+  margin-left: 40px;
+}
+.search-result-item-middle a {
+  text-decoration: none;
+  color: #222;
+  font-size: 20px;
+}
+.search-result-item-right {
+  margin-left: auto;
+  text-align: right;
+}
+.pagination-container {
+  margin: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination-div {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.pagination-buttons {
+  cursor: pointer;
+  border: none;
+  padding: 10px 25px;
+}
+.pagination-buttons:disabled,
+.pagination-buttons[disabled]{
+  cursor: not-allowed;
+}
+.pagination-tabs {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.pagination-item {
+  background-color: #D9D9D9;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
