@@ -22,7 +22,7 @@ const Pagination = () => {
 
         //check if tabs will exceed pageCount and reset tabStart
         if((tabStart + 10) >= pageCount) {
-            tabStart = pageCount - 10 + 1;
+            tabStart = (pageCount - 10 + 1) < 1 ? 1 : (pageCount - 10 + 1);
         }
 
         //check if total pages should hold less than 10 tabs
