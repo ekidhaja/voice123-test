@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Application setup guide
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -29,18 +29,18 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Worklog
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Play around with voice123 api endpoint **~ 1 hour**
+- Scaffold project, create basic views, and setup routing **~ 45 minutes**
+- Work on figma design **~ 6 hours**
+- Convert figma design to web components **~ 2 hours**
+- Implement searching voice123 api endpoint and displaying basic results **~ 1 hour**
+- Work on URL for persisting state and for sharing **~ 6 hours**
+- Work on pagination **~ 6 hours**
+- Work on search text highlighting **~ 30 minutes**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Future improvements and recommendations
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Make the page layouts to be responsive and mobile-friendly
+- Write comprehensive test coverage
