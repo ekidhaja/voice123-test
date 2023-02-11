@@ -31,14 +31,14 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Worklog
 
-- Play around with voice123 api endpoint **1 hour**
-- Scaffold project, create basic views, and setup routing **45 minutes**
-- Work on figma design **6 hours**
-- Convert figma design to web components **2 hours**
-- Implement searching voice123 api endpoint and displaying basic results **1 hour**
-- Work on URL for persisting state and for sharing **6 hours**
-- Work on pagination **6 hours**
-- Work on search text highlighting **30 minutes**
+- Play around with voice123 api endpoint -- **1 hour**
+- Scaffold project, create basic views, and setup routing -- **45 minutes**
+- Work on figma design -- **6 hours**
+- Convert figma design to web components -- **2 hours**
+- Implement searching voice123 api endpoint and displaying basic results -- **1 hour**
+- Work on URL for persisting state and for sharing -- **6 hours**
+- Work on pagination -- **6 hours**
+- Work on search text highlighting -- **30 minutes**
 
 ## Future improvements and recommendations
 
