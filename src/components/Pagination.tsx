@@ -4,6 +4,8 @@ import { SearchResultContext } from "../contexts/SearchResultContext";
 const Pagination = () => {
     const { page, setPage, pageCount } = useContext(SearchResultContext);
     const [tabs, setTabs] = useState<number[]>([]);
+
+    //flags to enable or disable prev and next buttons
     const [hidePrevButton, setHidePrevButton] = useState(true); //hidden by default
     const [hideNextButton, setHideNextButton] = useState(false); //shown by default
     
@@ -15,8 +17,13 @@ const Pagination = () => {
         const arr: number[] = [];
 
         //set where tab numbering should begin and end eg: 1-10, 2-11, 3-12 etc
-        let tabStart = (page - 10 + 1) < 1 ? 1 : (page - 10 + 1);
+        let tabStart = (page - 5) < 1 ? 1 : (page - 5);
         let tabMax = 10;
+
+        //check if tabs will exceed pageCount and reset tabStart
+        if((tabStart + 10) >= pageCount) {
+            tabStart = pageCount - 10 + 1;
+        }
 
         //check if total pages should hold less than 10 tabs
         if(Math.floor(pageCount / 10) < 1) {
