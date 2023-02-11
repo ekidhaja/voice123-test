@@ -31,7 +31,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Worklog
 
-- Play around with voice123 api endpoint **~ 1 hour**
+- Play around with voice123 api endpoint **1 hour**
 - Scaffold project, create basic views, and setup routing **~ 45 minutes**
 - Work on figma design **~ 6 hours**
 - Convert figma design to web components **~ 2 hours**
@@ -44,3 +44,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 - Make the page layouts to be responsive and mobile-friendly
 - Write comprehensive test coverage
+
