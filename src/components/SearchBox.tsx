@@ -11,7 +11,7 @@ interface Props {
 
 const SearchBox: React.FC<Props> = ({ keyword, setKeyword, searchParams, setSearchParams }) => {
     //get contexts
-    const { setResult, page, setPage, setPageCount, setRowCount } = useContext(SearchResultContext);
+    const { setResult, page, setPage, setPageCount } = useContext(SearchResultContext);
 
     //error flag
     const [error, setError] = useState(false);
@@ -46,7 +46,7 @@ const SearchBox: React.FC<Props> = ({ keyword, setKeyword, searchParams, setSear
     
                     //get headers
                     let totalPages = Number(res.headers["x-list-total-pages"]);
-                    let totalRows = Number(res.headers["x-list-total-rows"]);
+                    //let totalRows = Number(res.headers["x-list-total-rows"]);
         
                     //prepare search results to be displayed
                     res.data.providers?.forEach((provider: any) => {
@@ -59,7 +59,7 @@ const SearchBox: React.FC<Props> = ({ keyword, setKeyword, searchParams, setSear
                             media: provider.relevant_sample.file
                         })
                     });
-    
+
                     //set search results context
                     setResult(providers);
 
@@ -68,9 +68,6 @@ const SearchBox: React.FC<Props> = ({ keyword, setKeyword, searchParams, setSear
 
                     //set page count
                     setPageCount(totalPages);
-
-                    //set total row count
-                    setRowCount(totalRows);
 
                     setFreshLoad(false);
                 } catch (err: any) {
@@ -81,7 +78,7 @@ const SearchBox: React.FC<Props> = ({ keyword, setKeyword, searchParams, setSear
 
     }, [keyword, page]);
 
-    //called when Search button is clicked on Enter key is pressed
+    //called when Search button is clicked or Enter key is pressed
     function resetKeyword() {
         //set error if keyword is not provided
         if(!input) {
@@ -97,7 +94,7 @@ const SearchBox: React.FC<Props> = ({ keyword, setKeyword, searchParams, setSear
             //reset pageNo in context
             setPage(1);
 
-            //set search keyword ang page in url
+            //set search keyword and page in url
             setSearchParams({...searchParams, "keyword": input.trim(), "page": 1 });
         }
     }

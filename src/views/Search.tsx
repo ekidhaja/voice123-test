@@ -11,8 +11,11 @@ const Search = () => {
     const [keyword, setKeyword] = useState<string | null>(searchParams.get("keyword"));
     const [urlPage] = useState<string | null>(searchParams.get("page"));
 
-    //declare urlParams to pass down as props
+    //declare urlParams to pass down as props SearchBox
     const urlParams = { "keyword": keyword, "page": urlPage };
+
+    //search keywords to be passed as props to SearchResult
+    const urlKeywords: string[] = keyword ? keyword.split(" ") : [];
 
     return (
         <div>
@@ -25,7 +28,7 @@ const Search = () => {
                 />
             </div>
             <div className="search-result-container">
-                <SearchResult />
+                <SearchResult keywords={urlKeywords} />
             </div>
         </div>
     );

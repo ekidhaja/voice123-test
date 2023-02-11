@@ -1,9 +1,14 @@
 import React, { useContext } from "react";
+import Highlighter from "react-highlight-words";
 
 import { SearchResultContext } from "../contexts/SearchResultContext";
 import Pagination from "./Pagination";
 
-const SearchResult = () => {
+interface Props {
+    keywords: string[];
+}
+
+const SearchResult: React.FC<Props> = ({ keywords }) => {
     const { result } = useContext(SearchResultContext);
 
     return result.length ? (
@@ -20,10 +25,18 @@ const SearchResult = () => {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            {item.name}
+                            <Highlighter
+                                searchWords={keywords}
+                                autoEscape={true}
+                                textToHighlight={item.name}
+                            />
                         </a>
                     </h3>
-                    <div>{item.description}</div>
+                    <Highlighter
+                        searchWords={keywords}
+                        autoEscape={true}
+                        textToHighlight={item.description}
+                    />
                 </div>
                 <div className="search-result-item-right">
                     <audio controls>

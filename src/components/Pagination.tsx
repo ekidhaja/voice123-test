@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { SearchResultContext } from "../contexts/SearchResultContext";
 
 const Pagination = () => {
-    const { page, setPage, pageCount, rowCount } = useContext(SearchResultContext);
+    const { page, setPage, pageCount } = useContext(SearchResultContext);
     const [tabs, setTabs] = useState<number[]>([]);
     const [hidePrevButton, setHidePrevButton] = useState(true); //hidden by default
     const [hideNextButton, setHideNextButton] = useState(false); //shown by default
@@ -46,7 +46,7 @@ const Pagination = () => {
         
         //set tabs
         setTabs(arr);
-        
+
     }, [page, pageCount]);
 
     return (

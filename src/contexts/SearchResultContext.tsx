@@ -10,7 +10,6 @@ const SearchResultContextProvider: React.FC<Props> = ({ children }) => {
     const [result, setResult] = useState([]);
     const [page, setPage] = useState(1);
     const [pageCount, setPageCount] = useState(0);
-    const [rowCount, setRowCount] = useState(0);
     
     return (
         <SearchResultContext.Provider 
@@ -20,9 +19,7 @@ const SearchResultContextProvider: React.FC<Props> = ({ children }) => {
                 page, 
                 setPage,
                 pageCount,
-                setPageCount,
-                rowCount,
-                setRowCount
+                setPageCount
             }}
         >
             {children}

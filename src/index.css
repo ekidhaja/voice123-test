@@ -14,7 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 50px;
+  padding: 25px 0;
 }
 .nav .logo-div img {
   width: 120px;
@@ -22,7 +22,7 @@ body {
 }
 .search-box-container {
   width: 50%;
-  margin: 10px 0px;
+  margin: 25px 0px;
   padding: 5px;
 }
 .search-box {
